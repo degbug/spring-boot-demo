@@ -7,8 +7,10 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.core.annotation.Order;
 
 @SpringBootApplication
+@Order(3)
 public class SpringBootDemoApplication implements CommandLineRunner, ApplicationRunner {
 
     private Logger logger = LoggerFactory.getLogger(SpringBootDemoApplication.class);
@@ -28,11 +30,11 @@ public class SpringBootDemoApplication implements CommandLineRunner, Application
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        logger.info("执行了ApplicationRunner的run方法");
+        logger.info("执行了ApplicationRunner的run方法，顺序3");
     }
 
     @Override
     public void run(String... args) throws Exception {
-        logger.info("执行了CommandLineRunner的run方法");
+        logger.info("执行了CommandLineRunner的run方法，顺序3");
     }
 }
