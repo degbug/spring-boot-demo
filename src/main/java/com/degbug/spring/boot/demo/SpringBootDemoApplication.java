@@ -18,6 +18,10 @@ public class SpringBootDemoApplication implements CommandLineRunner, Application
 
     public static void main(String[] args) {
         SpringApplication.run(SpringBootDemoApplication.class, args);
+        //自定义退出码
+        //1. 定义实现ExitCodeGenerator的接口的bean
+        //2.调用下面的一行代码
+//        System.exit(SpringApplication.exit(SpringApplication.run(SpringBootDemoApplication.class, args)));
     }
 
 
